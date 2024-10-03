@@ -44,7 +44,13 @@ public class LaptopsGui extends BorderPane {
     }
 
     public void initializeComponents() throws FileNotFoundException {
-     //TODO
+     this.mainContent = new VBox();
+     this.mainContent.setSpacing(10);
+
+     ImageView banner = loadThumbnailImage();
+
+     this.mainContent.getChildren().addAll(banner);
+     this.setTop(mainContent);
 
     }
 
