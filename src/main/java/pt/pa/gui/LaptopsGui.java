@@ -45,14 +45,25 @@ public class LaptopsGui extends BorderPane {
 
     public void initializeComponents() throws FileNotFoundException {
      this.mainContent = new VBox();
+     VBox imageBox = new VBox();
+     Label label = new Label("Laptop Information");
      this.mainContent.setSpacing(10);
 
      ImageView bannerrr = loadThumbnailImage();
 
-     this.mainContent.getChildren().addAll(bannerrr);
-     this.setTop(mainContent);
+     this.listViewLaptops = new ListView();
+     this.listViewLaptops.getItems().addAll(laptops);
+     this.setLeft(listViewLaptops);
+
+     this.mainContent.getChildren().addAll(label);
+     imageBox.getChildren().addAll(bannerrr);
+     this.setTop(imageBox);
+     this.setRight(mainContent);
+     //this.mainContent.
 
     }
+
+
 
     /**
      * Load the data  contain on json file specified on DATA_PATH.
@@ -67,6 +78,8 @@ public class LaptopsGui extends BorderPane {
         }.getType();
 
         return gson.fromJson(new FileReader(DATA_PATH), arrayListType);
+
+
     }
 
     /**

@@ -77,13 +77,6 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "Laptop{" +
-                "displayName='" + displayName + '\'' +
-                "releaseDate='" + releaseDate + '\'' +
-                ", cpu='" + cpu + '\'' +
-                ", ram='" + ram + '\'' +
-                ", ssd='" + ssd + '\'' +
-                ", reviews=" + reviews +
-                '}';
+        return displayName;
     }
 }
