@@ -47,9 +47,9 @@ public class LaptopsGui extends BorderPane {
      this.mainContent = new VBox();
      this.mainContent.setSpacing(10);
 
-     ImageView bannerr = loadThumbnailImage();
+     ImageView banner = loadThumbnailImage();
 
-     this.mainContent.getChildren().addAll(bannerr);
+     this.mainContent.getChildren().addAll(banner);
      this.setTop(mainContent);
 
     }
